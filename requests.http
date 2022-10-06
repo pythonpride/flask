@@ -1,0 +1,59 @@
+@baseUrl = http://127.0.0.1:5000/
+
+# получение юзера 
+GET {{baseUrl}}/users/3/
+Content-Type: application/json
+
+
+###
+
+# создание юзера
+POST {{baseUrl}}/users/
+Content-Type: application/json
+
+
+{
+  "email":"345@ya.ru",
+  "password": "1234"
+}
+
+###
+
+# создание объявления
+POST {{baseUrl}}/adv/
+Content-Type: application/json;
+
+
+{
+  "title": "Продам квартиру",
+  "description": "Продам трехкомнатную квартиру",
+  "owner": 1
+   
+}       
+
+###
+# получение обьявления 
+GET {{baseUrl}}/adv/1/
+Content-Type: application/json;
+
+
+
+###
+# редактировать объявление
+PATCH {{baseUrl}}/adv/1/
+Content-Type: application/json
+
+
+{
+  "title": "Пррам машину",
+  "description": "Продам машину дорого",
+  "owner": 1
+   
+}     
+
+###
+
+DELETE {{baseUrl}}/adv/1/
+
+
+
